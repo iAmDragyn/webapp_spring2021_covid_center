@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 
 <head>
     <title> COVID Center Website </title>
@@ -12,6 +11,7 @@
     </header>
 
     <section>
+        <h6> &emsp; Please fill out the form below. </h6>
         <article>
             <!-- Form Goes Here!-->
             <form>
@@ -27,8 +27,8 @@
                     </p>
 
                     <p>
-                        <label for="txtFirstName"> Last name: </label>
-                        <input type="text" id="txtFirstName" name="txtFirstName" required>
+                        <label for="txtLastName"> Last name: </label>
+                        <input type="text" id="txtLastName" name="txtLastName" required>
                         <strong><abbr style="color: red" title="required">*</abbr></strong>
                     </p>
 
@@ -46,7 +46,7 @@
 
                     <p>
                         <label for="txtPhone"> Phone Number: </label>
-                        <abbr title="Format: xxx-xxx-xxxx"> <input type="text" id="txtFirstName" name="txtFirstName"
+                        <abbr title="Format: xxx-xxx-xxxx"> <input type="text" id="txtPhone" name="txtPhone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> </abbr>
                     </p>
 
@@ -221,19 +221,16 @@
                             </select>
                             <strong><abbr style="color: red" title="required">*</abbr></strong> <br>
                         </label>
-                    <div>
                         <label for="txtCountry">
-                            <span> &emsp; If yes, which countries? </span>
-                            <input type="text" id="txtCountry" name="txtCountry" required>
-                            <strong><abbr style="color: red" title="required">*</abbr></strong>
+                            <span> If yes, which countries? </span>
+                            <input type="text" id="txtCountry" name="txtCountry">
                         </label>
-                    </div>
                     </p>
 
                     <p>
-                        <label for="ddCountry">
+                        <label for="ddGroup">
                             <span> Have you socialized with a group of 6 or more people in the last 14 days? </span>
-                            <select id="ddCountry" name="ddCountry">
+                            <select id="ddGroup" name="ddGroup">
                                 <option value="No" selected> No </option>
                                 <option value="Yes"> Yes </option>
                             </select>
@@ -242,7 +239,8 @@
                     </p>
                     <p>
                         <label for="txtTemp"> Current Temperature: </label>
-                        <input type="text" id="txtTemp" name="txtTemp" step=".01" required> <label>°</label>
+                        <input type="text" id="txtTemp" name="txtTemp" pattern="[0-9]{2,3}.[0-9]{2}" required>
+                        <label>°</label>
                         <strong><abbr style="color: red" title="required">*</abbr></strong>
                     </p>
 
